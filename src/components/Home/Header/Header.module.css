@@ -1,0 +1,19 @@
+header{
+    height: calc(100vh - 79px);
+    position: relative;
+}
+header > div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+}
+.info p:nth-child(1){
+    color: var(--alt-color);
+}
+.info p:nth-child(2){
+    color: var(--main-color);
+}
+.info p:nth-child(3){
+    color: var(--ternary-color);
+}

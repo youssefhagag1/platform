@@ -1,0 +1,41 @@
+
+.navbarScrolled {
+    position: fixed !important;
+    width: 100%;
+    top: 0;
+}
+.profileIcon{
+    font-size: 30px;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: all var(--main-time);
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.profileIcon:hover {
+    background-color: var(--alt-background);
+    color: white;
+}
+.navLink {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 4px; /* gives space for the underline */
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ee390f; /* same as active link color */
+  transition: width 0.3s ease-in-out;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
