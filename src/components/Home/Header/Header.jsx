@@ -1,8 +1,9 @@
 import React from 'react'
-import banner from "../../../assets/images/banner_bg.webp"
 import { Col, Container, Image, Row } from 'react-bootstrap'
 import Styles from "./Header.module.css"
 import headerImage from "../../../assets/images/headerStudent.webp"
+import PrimaryBtn from "../../CustomBtns/PrimaryBtn/PrimaryBtn"
+import SecondaryBtn from '../../CustomBtns/SecondaryBtn/SecondaryBtn'
 function Header() {
   return (
     <header >
@@ -18,6 +19,10 @@ function Header() {
                      saw you arrie said man beast whales his void unto last session for bite.
                      Set have great you'll male grass yielding yielding man
                 </p>
+                <div className='d-flex justify-content-center justify-content-lg-start gap-4'>
+                  <PrimaryBtn text = {"courses"} url = {""}/>
+                  <SecondaryBtn text = {"courses"} url = {""}/>
+                </div>
             </Col>
             <Col xs={12} lg={6}>
                 <Image src={headerImage} className={Styles.student} fluid/>

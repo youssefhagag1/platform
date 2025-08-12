@@ -1,9 +1,20 @@
-
-.navbarScrolled {
-    position: fixed !important;
-    width: 100%;
-    top: 0;
+.fixedNavbar {
+  transform: translateY(-100%);
+  background-color: white;
 }
+
+.navbar , .fixedNavbar {
+  transition: all 0.3s ease-in-out;
+}
+.visible {
+  transform: translateY(0);
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+
 .profileIcon{
     font-size: 30px;
     color: var(--main-color);

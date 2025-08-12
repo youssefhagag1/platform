@@ -1,0 +1,36 @@
+.tesimonials {
+width: 1200px;
+max-width: 100%;
+margin-top: 50px;
+margin-left: auto;
+height: 300px;
+}
+.text {
+    padding: 40px 30px;
+    position: relative;
+}
+.text p {
+width: 400px;
+color: var(--ternary-color);
+font-style: italic;
+}
+.text  svg {
+    content: "";
+    position: absolute;
+    right: 40px;
+    font-size: 92px;
+    z-index: -1;
+    color: var(--ternary-color);
+    opacity: 0.1;
+}
+
+.text h4 {
+    color: var(--main-color);
+}
+
+@media(max-width: 767px) {
+  .text p {
+    width: 100%;
+  }
+}
+

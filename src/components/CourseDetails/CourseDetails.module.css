@@ -1,0 +1,38 @@
+.course{
+    margin-top:var(--main-spacing) ;
+    margin-bottom:var(--main-spacing) ;
+}
+.courseImage{
+    height: 370px;
+}
+.info span:not(.trainer){
+    color: var(--ternary-color);
+    font-size: 18px;
+    font-weight: 500;
+}
+.trainer {
+    font-size: 18px;
+}
+.text span , .trainer  , .reviews , .feedback span{
+    font-weight: 600;
+    color: var(--main-color);
+}
+.text p , .rate span{
+    color: var(--ternary-color);
+}
+.text p {
+    font-weight: 400;
+}
+.rate span {
+    font-weight: 500;
+    width: 60px;
+}
+.feedback textarea{
+    border: 1px solid #ddd ;
+    border-radius: 5px;
+    padding: 10px;
+}
+.feedback textarea:focus{
+    outline: none;
+    caret-color: var(--alt-background);
+}

@@ -1,0 +1,51 @@
+.card {
+    margin-top: var(--main-spacing);
+}
+.img {
+    max-height: 230px;
+}
+.track {
+    border: none;
+    padding: 5px 20px;
+    background-color: var(--alt-background);
+    color: #fff;
+}
+.card span {
+    font-weight: 500;
+    color: var(--alt-background);
+}
+.info {
+    border-bottom: 1px solid #eee;
+}
+.info h5 {
+    color: var(--main-color);
+    font-weight: 500;
+}
+.info p , .techer p{
+    color: var(--ternary-color);
+}
+.techer p{
+    font-size: 14px;
+}
+.techer span {
+color: var(--main-color);
+}
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.freeBanner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--alt-background); 
+  color: white;
+  font-weight: bold;
+  padding: 5px 30px;
+  transform: translate(-25px, 60px) rotate(-45deg);
+  transform-origin: top left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 120px;
+}

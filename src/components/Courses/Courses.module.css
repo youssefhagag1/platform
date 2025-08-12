@@ -1,0 +1,38 @@
+.placeholderBtn{
+  background-color: var(--alt-background) !important;
+  border: none !important;
+  margin-bottom: 10px !important;
+  border-radius: 0 !important;
+}
+.paginationButton {
+  padding: 6px 12px;
+  background: #f1f1f1;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 3px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.paginationButton:hover {
+  background: #e0e0e0;
+}
+
+.activeButton {
+  background: var(--alt-background);
+  color: #fff;
+}
+
+.arrowButton {
+  padding: 6px 10px;
+  background: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 3px;
+}
+
+.arrowButton:hover {
+  background: #e0e0e0;
+}

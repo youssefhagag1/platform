@@ -4,17 +4,14 @@
     --ternary-color : #556172;
     --main-background : #f7f7f7;
     --alt-background : #ff663b;
-    --main-linear : linear-gradient(to left, #ee390f 0%, #f9b700 51%, #ee390f 100%);
+    --main-linear : linear-gradient(to right, #ee390f 0%, #f98900 50% , #f9b700 100%);
     --main-time : .3s;
+    --main-spacing : 60px;
+}
 
-}
-*{
-    box-sizing: border-box;
-}
 
 body{
     font-family: "Roboto", sans-serif;
-    height: 5000px;
 }
 
 a {

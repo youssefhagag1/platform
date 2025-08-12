@@ -1,0 +1,32 @@
+.numbers{
+    background-image: var(--main-linear);
+    padding: 80px;
+    margin-top: var(--main-spacing);
+    margin-bottom : var(--main-spacing);
+}
+.numbers span {
+    display: block;
+    color: #fff;
+    text-align: center;
+}
+.category {
+    position: relative;
+    font-size:1.5rem ;
+    font-weight: 500;
+    width: fit-content;
+    margin: 30px auto 0;
+}
+.category::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -15px;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 1px;
+    background-color: #fff;
+
+}
+.intersected {
+    background-color: red;
+}

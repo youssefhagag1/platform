@@ -1,0 +1,33 @@
+.title {
+    padding-left: 80px;
+    color: var(--ternary-color);
+}
+.title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 25%;
+    background-color: var(--alt-background);
+    width: 70px;
+    height: 3px;
+}
+@media(max-width : 767px){
+    .title {
+        margin: 0 auto;
+        padding-left: 0;
+        margin-bottom: 30px;
+        width: fit-content;
+    }
+    .title::after {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+        width: 70%;
+    }
+}
+.head{
+    color: var(--main-color);
+}
+ .text ,  .info {
+    color: var(--ternary-color);
+}

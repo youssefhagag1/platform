@@ -1,0 +1,25 @@
+.advance{
+    padding: var(--main-spacing) 10px;
+    overflow-x: hidden;
+}
+.info div > div:nth-child(1) {
+background-color: #fdeae5;
+width: 50px;
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--main-color);
+border-radius: 50%;
+opacity: 0.9;
+}
+.info div span {
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 24px;
+}
+.info div p {
+    color: var(--ternary-color);
+}
+
+

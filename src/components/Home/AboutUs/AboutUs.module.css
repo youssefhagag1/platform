@@ -1,0 +1,9 @@
+.about {
+    padding: var(--main-spacing) 10px;
+}
+.about .learning{
+    color: var(--main-color);
+}
+.about .fifth , .about .info {
+    color: var(--ternary-color);
+}

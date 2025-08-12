@@ -17,3 +17,8 @@ header > div {
 .info p:nth-child(3){
     color: var(--ternary-color);
 }
+@media(max-width : 991px) {
+    .student {
+    width: 500px;
+}
+}
