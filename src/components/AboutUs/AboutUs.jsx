@@ -1,20 +1,30 @@
 import React from 'react'
 import Styles from "./AboutUs.module.css"
 import { Container, Image , Row , Col } from 'react-bootstrap'
-import learningImage from "../../../assets/images/learning_img.webp"
+import learningImage from "../../assets/images/learning_img.webp"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons'
 import { faPenRuler } from '@fortawesome/free-solid-svg-icons'
-import PrimaryBtn from "../../CustomBtns/PrimaryBtn/PrimaryBtn"
-import Title from '../../Title/Title'
+import PrimaryBtn from "../CustomBtns/PrimaryBtn/PrimaryBtn"
+import Title from '../Title/Title'
+import { useManualIntersection } from "../../Hooks/useManualIntersection";
+
 function AboutUs() {
+    const [ref, isIntersecting] = useManualIntersection(100);
+  
   return (
-    <Container fluid>
+    <Container fluid className='overflow-hidden'>
       <Row className='align-items-center'>
-        <Col md={6} className='order-md-first order-last'>
+        <Col md={6}
+        ref={ref}
+        className={`${isIntersecting ? "intersected" : ""} left order-md-first order-last`} 
+        >
             <Image src={learningImage} alt='i image' fluid/>
         </Col>
-      <Col md = {6} className={` order-md-last order-first ${Styles.about}`}>
+      <Col md = {6}
+       ref={ref}
+        className={`${isIntersecting ? "intersected" : ""} right  order-md-last order-first ${Styles.about}`} 
+        >
         <Title 
          title="About Us"
          head = "Learning with Love and Laughter"
@@ -29,7 +39,7 @@ function AboutUs() {
             <p>Fly female them whales fly them day deep given night.</p>
         </div >
                 <div className='d-flex justify-content-center justify-content-md-start mt-4'>
-                    <PrimaryBtn text = {"Read More"} url = {""} />
+                    <PrimaryBtn text = {"Read More"} url = {"/about"} />
                 </div>
       </Col>
       </Row>

@@ -11,21 +11,26 @@ import { Image } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteRightAlt } from '@fortawesome/free-solid-svg-icons';
 import AltTitle from "../AltTitle/AltTitle"
-function Tesimonials() {
+import { useManualIntersection } from "../../Hooks/useManualIntersection";
 
+function Tesimonials() {
+    const [ref, isIntersecting] = useManualIntersection(50);
        return (
         <>
-        <div className='d-md-none d-block'>
+        <div className='mt-5'>
             <AltTitle title="tesimonials" head="Happy Students"/>
         </div>
-        <div className={Styles.tesimonials}>
+        <div
+        
+        className={`overflow-hidden ${Styles.tesimonials}`}>
             <Swiper
                 slidesPerView={'auto'}
                 pagination={{
                 clickable: true,
                 }}
                 modules={[Pagination]}
-                className="mySwiper"
+                ref={ref}
+                className={`${isIntersecting ? "intersected" : ""} right mySwiper ${Styles.tesimonials}`} 
             >
                 <SwiperSlide>
                     <div className={`${Styles.text} shadow p-x rounded `}>

@@ -4,12 +4,21 @@ import Styles from "./Header.module.css"
 import headerImage from "../../../assets/images/headerStudent.webp"
 import PrimaryBtn from "../../CustomBtns/PrimaryBtn/PrimaryBtn"
 import SecondaryBtn from '../../CustomBtns/SecondaryBtn/SecondaryBtn'
+import { useManualIntersection } from "../../../Hooks/useManualIntersection";
+
 function Header() {
+    const [ref, isIntersecting] = useManualIntersection(100);
+  
   return (
-    <header >
-      <Container>
+    <header className='overflow-hidden'>
+      <Container >
         <Row className='align-items-center gy-3 text-center text-lg-start'>
-            <Col xs={12} lg={6} className={`order-last order-lg-first ${Styles.info}`}>
+            <Col 
+              xs={12} lg={6}
+              ref={ref}
+              className={`${isIntersecting ? "intersected" : ""} left order-last order-lg-first ${Styles.info}`}
+              
+             >
                 <p className='text-uppercase fw-bold mb-0 '>Every child yearns to learn</p>
                 <p className='display-2 fw-bold'>
                     Making Your Childs World Better
@@ -20,11 +29,15 @@ function Header() {
                      Set have great you'll male grass yielding yielding man
                 </p>
                 <div className='d-flex justify-content-center justify-content-lg-start gap-4'>
-                  <PrimaryBtn text = {"courses"} url = {""}/>
-                  <SecondaryBtn text = {"courses"} url = {""}/>
+                  <PrimaryBtn text = {"courses"} url = {"/courses"}/>
+                  <SecondaryBtn text = {"Get Started"} url = {"/register"}/>
                 </div>
             </Col>
-            <Col xs={12} lg={6}>
+            <Col 
+              xs={12} lg={6}
+               ref={ref}
+              className={`${isIntersecting ? "intersected" : ""} right`}
+              >
                 <Image src={headerImage} className={Styles.student} fluid/>
             </Col>
         </Row>

@@ -33,9 +33,13 @@
 .navLink {
   position: relative;
   text-decoration: none;
-  padding-bottom: 4px; /* gives space for the underline */
+  padding: 10px ;
 }
-
+@media(max-width : 991px) {
+  .navLink.active{
+  background-color: white;
+}
+}
 .navLink::after {
   content: "";
   position: absolute;

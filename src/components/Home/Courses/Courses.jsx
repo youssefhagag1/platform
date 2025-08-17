@@ -3,8 +3,10 @@ import AltTitle from '../../AltTitle/AltTitle'
 import axios from 'axios';
 import { Col, Container, Row } from 'react-bootstrap';
 import CourseCard from "../../CourseCard/CourseCard"
+import { useManualIntersection } from "../../../Hooks/useManualIntersection";
 
 function Courses() {
+  const [ref, isIntersecting] = useManualIntersection(50);
   const baseURL = import.meta.env.VITE_API_BASE_URL;
   const [courses, setCourses] = useState([]);
   
@@ -21,10 +23,13 @@ function Courses() {
   }, []);
 
   return (
-    <div className="courses-section">
+    <div className="courses-section ">
       <AltTitle title="popular courses" head="Special Courses"/>
-      <Container>
-        <Row>
+      <Container className='mt-5'>
+        <Row
+        ref={ref}
+        className={`${isIntersecting ? "intersected" : ""} scale `} 
+        >
           {courses.length > 0 ? (
             courses.slice(0 , 6).map(course => (
               <Col md={6} lg={4} className='g-4'>

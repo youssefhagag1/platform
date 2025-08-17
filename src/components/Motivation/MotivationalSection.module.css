@@ -1,0 +1,62 @@
+.platformSection {
+  flex: 1;
+  padding: 20px;
+  background: var(--main-linear);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.platformContent {
+  max-width: 600px;
+}
+
+.platformTitle {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.platformText {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.courseStats {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.statItem h3 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.statItem p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.exploreButton {
+  background: white;
+  color: var(--alt-background);
+  border: none;
+  padding: 14px 30px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--main-time);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.exploreButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: var(--main-color);
+}

@@ -1,0 +1,159 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--main-background);
+}
+
+/* Login Section */
+.loginSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.loginBox {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.loginTitle {
+  color: var(--main-color);
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  color: var(--alt-color);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.formInput {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color var(--main-time);
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: var(--alt-background);
+}
+
+.loginButton {
+  background: var(--main-linear);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--main-time);
+}
+
+.loginButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.socialLogin {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.socialLogin p {
+  color: var(--ternary-color);
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.socialLogin p::before,
+.socialLogin p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: #ddd;
+}
+
+.socialLogin p::before {
+  left: 0;
+}
+
+.socialLogin p::after {
+  right: 0;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.socialButton {
+  padding: 8px;
+  background-color: var(--main-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  color: var(--ternary-color);
+  cursor: pointer;
+  transition: all var(--main-time);
+  border-radius: 4px;
+}
+
+.socialButton:hover {
+  background-color: var(--main-background);
+  color: var(--alt-background);
+  border-color: var(--alt-background);
+}
+
+.socialButton img {
+  width: 40px;
+}
+
+.signupText {
+  text-align: center;
+  color: var(--ternary-color);
+}
+
+.signupText a {
+  color: var(--alt-background);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .loginSection {
+    padding: 40px 20px;
+  }
+}

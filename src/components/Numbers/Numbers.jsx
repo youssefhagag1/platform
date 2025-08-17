@@ -1,11 +1,11 @@
 import React from 'react';
 import Styles from "./Numbers.module.css";
 import { Col, Container, Row } from 'react-bootstrap';
-import { useIntersection } from "../../../Hooks/useIntersection";
+import { useManualIntersection } from "../../Hooks/useManualIntersection";
 import CountUp from 'react-countup';
 
 function Numbers() {
-  const [ref, isIntersecting] = useIntersection({ threshold: 0.1 });
+  const [ref, isIntersecting] = useManualIntersection(100);
 
   const countersData = [
     { value: 1024, label: "All Teachers" },

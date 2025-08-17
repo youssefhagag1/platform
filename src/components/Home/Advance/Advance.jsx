@@ -6,12 +6,20 @@ import Title from "../../Title/Title"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopy } from '@fortawesome/free-regular-svg-icons'
 import { faKaaba } from '@fortawesome/free-solid-svg-icons'
+import { useManualIntersection } from "../../../Hooks/useManualIntersection";
+
 function Advance() {
+      const [ref, isIntersecting] = useManualIntersection(100);
+    
   return (
-    <div className={Styles.advance}>
+    <div className={`overflow-hidden ${Styles.advance}`}>
         <Container >
       <Row className='align-items-center  g-5'>
-        <Col md={7}>
+        <Col 
+        md={7}
+         ref={ref}
+        className={`${isIntersecting ? "intersected" : ""} left `} 
+        >
             <Title 
                 title="Advance feature"
                 head="Our Advance Educator Learning System"
@@ -34,7 +42,10 @@ function Advance() {
                 </div>
             </div>
         </Col>
-        <Col md={5}>
+        <Col md={5}
+        
+        ref={ref}
+        className={`${isIntersecting ? "intersected" : ""} right `} >
             <Image src={advanceImg} fluid />
         </Col>
       </Row>

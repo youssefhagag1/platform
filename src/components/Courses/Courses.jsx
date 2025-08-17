@@ -12,7 +12,6 @@ function Courses() {
   const [courses, setCourses] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [lastPage, setLastPage] = useState(1);
-  const [error, setError] = useState("");
   const [loading, setLoading] = useState(true); 
 
   const handlePagination = () => {
@@ -95,7 +94,7 @@ function Courses() {
   );
 
   return (
-    <div className='mt-5'>
+    <div className='my-5'>
       <Container>
         <Our title="our courses" />
       </Container>

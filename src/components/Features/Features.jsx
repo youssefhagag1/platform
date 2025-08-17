@@ -1,19 +1,29 @@
 import React from 'react'
 import Styles from "./Features.module.css"
 import { Container } from 'react-bootstrap'
-import PrimaryBtn from "../../CustomBtns/PrimaryBtn/PrimaryBtn"
+import PrimaryBtn from "../CustomBtns/PrimaryBtn/PrimaryBtn"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClone, faLightbulb } from '@fortawesome/free-regular-svg-icons'
 import { faPen } from '@fortawesome/free-solid-svg-icons'
+import { useManualIntersection } from "../../Hooks/useManualIntersection";
+
 function Features() {
+    const [ref, isIntersecting] = useManualIntersection(5);
+  
   return (
-    <Container className={Styles.features} >
-      <div className={Styles.boxes}>
-        <div  className={`text-center text-md-start ${Styles.feat}`}>
+    <Container
+     ref={ref}
+    className={`${isIntersecting ? "intersected" : ""} bottom position-relative z-3 ${Styles.features}`} 
+    >
+      <div 
+      className={Styles.boxes}
+      
+      >
+        <div  className={`text-center text-md-start  ${Styles.feat}`}>
                 <h2 className='display-5 fw-bold mb-4'>Awesome Feature</h2>
                 <p className='mb-4'>Set have great you male grass yielding an yielding first their you're have called the abundantly fruit were man</p>
                 <div className='d-flex justify-content-center justify-content-md-start'>
-                    <PrimaryBtn text = {"Read More"} url = {""} />
+                    <PrimaryBtn text = {"Read More"} url = {"/about"} />
                 </div>
         </div>
         <div  className={Styles.box}>

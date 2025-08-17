@@ -1,0 +1,25 @@
+.footer {
+    background-color: var(--main-background);
+    padding-top: var(--main-spacing);
+}
+.footer h2 {
+    font-weight: 600;
+    color: var(--main-color);
+}
+.footer p {
+color: #888;
+}
+.contactItem {
+    display: flex;
+    gap: 20px;
+    span {
+        color: var(--main-color);
+        font-weight: 500;
+    }
+}
+.socialList li  a{
+    color: var(--main-color) ;
+}
+.name {
+    color: var(--alt-background);
+}

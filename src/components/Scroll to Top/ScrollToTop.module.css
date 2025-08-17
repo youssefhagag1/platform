@@ -1,0 +1,28 @@
+.top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  opacity: 0;
+  transition: opacity .35s;
+  z-index: 999;
+}
+
+.top.active {
+  opacity: 1;
+}
+
+.top button {
+  --progress: 0%;
+  --size: 40px;
+  width: var(--size);
+  height: var(--size);
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background:
+      radial-gradient(circle at 50% 50%,  var(--alt-background) 62%, transparent 63%) ,
+      conic-gradient(var(--main-color) var(--progress), #fff 0);
+  color: #fff;
+  font-size: 1.1rem;
+  transition: transform .25s;
+}

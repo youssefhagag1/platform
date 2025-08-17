@@ -1,0 +1,21 @@
+.contact h2 , .info > div h5 {
+    color: var(--main-color);
+}
+.contact input , .contact textarea {
+    border: 1px solid #f0e9ff;
+    
+}
+.contact input:focus , .contact textarea:focus {
+    outline: none;
+    
+}
+
+.contact input:focus::placeholder,
+.contact textarea:focus::placeholder {
+  opacity: 0;
+  transition: var(--main-time);
+}
+.info > div p{
+color: var(--ternary-color);
+margin-top: -8px;
+}

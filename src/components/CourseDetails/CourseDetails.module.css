@@ -1,3 +1,4 @@
+
 .course{
     margin-top:var(--main-spacing) ;
     margin-bottom:var(--main-spacing) ;
@@ -35,4 +36,30 @@
 .feedback textarea:focus{
     outline: none;
     caret-color: var(--alt-background);
+}
+.send {
+    position: relative;
+    background-color: var(--alt-background);
+    overflow: hidden; 
+    z-index: 1;
+}
+
+.send::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: width var(--main-time) ease;
+    z-index: -1; 
+}
+
+.send:hover::after {
+    width: 100%;
+}
+
+.delete {
+    background-color: var(--main-color);
 }
